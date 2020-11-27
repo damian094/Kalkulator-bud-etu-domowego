@@ -551,8 +551,8 @@ body footer div.paragraph p {
     padding: 30px 20px 0;
     background-color: rgba(65, 64, 64, 0.637);
     color: #eee;
-    -ms-flex-preferred-size: 250px;
-        flex-basis: 250px;
+    -ms-flex-preferred-size: 220px;
+        flex-basis: 220px;
     border-radius: 0 0 30px 30px;
   }
   body main section#text h2 {
