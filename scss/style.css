@@ -147,7 +147,7 @@ body {
           flex-direction: column;
   width: 100vw;
   background-color: #fafafa;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 body header {

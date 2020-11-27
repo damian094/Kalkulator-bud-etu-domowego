@@ -1,6 +1,6 @@
 class DOMAnimation {
     constructor() {
-        document.body.style.height = window.innerHeight + 'px';
+        document.body.style.height = window.availHeight + 'px'
         //h2 and paragraph animation
         this.headerTextContents = ['Dochody', 'Wydatki', 'Podsumowanie', ''];
         this.paragraphsTextContents = ['Wypełnij pola formularza, aby obliczyć swoje dochody...', 'Wypełnij pola formularza, aby obliczyć swoje wydatki...', 'Oto bilans Twoich przychodów i wydatków:'];
@@ -64,7 +64,7 @@ class DOMAnimation {
             })
         })
 
-        window.addEventListener('resize', () => document.body.style.height = window.innerHeight + 'px')
+        // window.addEventListener('resize', () => document.body.style.height = window.innerHeight + 'px')
         this.mediaQuery()
     }
     mediaQuery() {
