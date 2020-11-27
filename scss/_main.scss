@@ -29,7 +29,7 @@ body {
     @include flexbox(column);
     width: 100vw;
     background-color: rgb(250, 250, 250);
-    overflow: hidden;
+    overflow-y: hidden;
 
     header {
         padding-top: 20px;
