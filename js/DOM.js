@@ -59,6 +59,7 @@ class DOMAnimation {
                 this.headerInterval = setInterval(this.changeHeaderText, 80);
                 this.paragraphInterval = setInterval(this.changeParagraphText, 40);
                 this.changeSection();
+                document.body.style.zoom = 1;
             })
         })
 
@@ -77,6 +78,7 @@ class DOMAnimation {
             });
             document.querySelector('header').remove();
             document.querySelector('#summary h2').remove();
+            document.body.style.height = window.screen.height;
         } 
     }
 }
