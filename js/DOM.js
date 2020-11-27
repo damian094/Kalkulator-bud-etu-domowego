@@ -78,8 +78,8 @@ class DOMAnimation {
             });
             document.querySelector('header').remove();
             document.querySelector('#summary h2').remove();
-            document.body.style.height = window.screen.height;
-        } 
+            document.body.style.height = window.screen.height + 'px';
+        }
     }
 }
 
