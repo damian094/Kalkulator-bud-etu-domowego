@@ -68,6 +68,14 @@ class DOMAnimation {
         if (window.matchMedia('(max-width: 1025px)').matches) {
             document.querySelector('h2.invisible').classList.add('hidden');
         }
+        if (window.matchMedia('(max-width: 415px)').matches) {
+            document.querySelectorAll('select option:nth-of-type(1)').forEach(input => {
+                input.textContent = "PLN/MSC";
+            });
+            document.querySelectorAll('select option:nth-of-type(2)').forEach(input => {
+                input.textContent = "PLN/ROK";
+            });
+        } 
     }
 }
 

@@ -322,14 +322,15 @@ body {
 
 @media (max-width: 415px), (max-width: 1000px) and (orientation: landscape) {
     html {
-        font-size: 8px;
+        font-size: 13px;
     }
 
     body {
         header {
             h1 {
-                padding: 0 10px;
-                margin: 0 20px;
+                padding: 0 5px;
+                margin: 0;
+                font-size: 1.8em;
             }
         }
         main {
@@ -346,15 +347,18 @@ body {
                 section#summary {
 
                     form {
-                        padding: 5px 20px;
+                        padding: 5px 6px;
 
                         input {
-                            padding: 0px;
-                            width: 65px;
+                            padding: 3px;
+                            width: 80px;
+                            font-size: 0.8em;
+                            background-color: white;
                         }
 
                         label {
                             flex-basis: 40%;
+                            line-height: 13px;
                         }
                     }
                 }
@@ -367,38 +371,41 @@ body {
                     div {
 
                         canvas {
-                            width: 300px !important;
+                            width: 350px !important;
                         }
                     }
                 }
             }
             section#text {
-                padding: 15px 20px;
+                padding: 25px 20px 20px;
 
                 h2 {
-                    font-size: 3.7em;
+                    font-size: 3.3em;
+                    line-height: 40px;
                 }
 
                 
             h2.typeWriter {
-                padding-bottom: 0px;
+                padding-bottom: 12px;
             }
 
                 span.description {
-                    padding: 5px 0;
+                    line-height: 20px;
+                    font-size: 1.1em;
                 }
             }
         }
         footer {
-            min-height: 60px;
+            min-height: 50px;
 
             div.wave {
-                height: 60px;
+                height: 50px;
             }
 
             div.paragraph {
                 p {
                     padding-bottom: 2px;
+                    font-size: 0.65em;
                 }
             }
         }
