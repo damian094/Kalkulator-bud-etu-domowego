@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator budżetu domowego</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Kalkulator budżetu domowego</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section id="start" class="operating">
+                <p>Kilknij w przycisk, aby rozpocząć</p>
+                <button>Start</button>
+            </section>
+
+            <section id="incomes" class="hidden operating">
+                <form action="">
+                    <h3>Wszystkie dochody</h3>
+                    <label>Wynagrodzenie netto:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Emerytura:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Zasiłek:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Alimenty:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Inne:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                </form>
+                <button>Następny krok</button>
+            </section>
+
+            <section id="expenses" class="hidden operating">
+                <form action="" name="bills">
+                    <h3>Rachunki</h3>
+                    <label>Czynsz:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Woda:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Prąd:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Ogrzewanie:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Gaz:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Śmieci:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Telefon, TV, internet:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Inne:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                </form>
+
+                <form action="" name="financial-products">
+                    <h3>Produkty Finanasowe</h3>
+                    <label>Kredyt:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Pożyczki:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Leasing samochodu:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Płatne subskrypcje:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Inne:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                </form>
+
+                <form action="" name="household-expenses">
+                    <h3>Wydatki domowe</h3>
+                    <label>Żywność:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Środki czystości:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Ubrania:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Paliwo:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Bilety/karta miejska:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Lekarstwa:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Wizyty lekarskie:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Rozrywka/hobby:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Inne:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                </form>
+
+                <form action="" name="education">
+                    <h3>Edukacja</h3>
+                    <label>Kursy:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Szkoła:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Książki:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Inne:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                </form>
+
+                <form action="" name="occasional-expenses">
+                    <h3>Wydatki okazjonalne</h3>
+                    <label>Prezenty:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Wakacje:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Naprawy samochodu:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                    <br>
+                    <label>Inne:</label>
+                    <input type="number" placeholder='WYPEŁNIJ POLE' min=0>
+                    <select>
+                        <option value="">PLN Miesięcznie</option>
+                        <option value="">PLN Rocznie</option>
+                    </select>
+                </form>
+                <button>Zatwierdź</button>
+            </section>
+
+            <section id="summary" class="hidden operating">
+                <h2>Twój wynik:</h2>
+
+                <p id="incomeSummary">Dochody:<span></span></p>
+                <p id="expensesSummary">Wydatki:<span></span></p>
+                <p id="balanceSummary">BILANS:<span></span></p>
+                <div class="chartContainer"><canvas id="myChart"></canvas></div>
+            </section>
+        </div>
+
+        <section id="text">
+            <h2>Krok <span id="step">0</span> z 3</h2>
+            <h2 class="typeWriter">Rozpocznij</h2>
+            <span class="typeWriter description">Witaj w kalkulatorze budżetu domowego...</span><span class="animated description">|</span>
+            <h2 class="invisible">Podsumowanie</h2>
+        </section>
+    </main>
+
+    <footer>
+        <div style="overflow: hidden;" class="wave under"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-17.21,120.88 C159.42,-49.83 280.19,58.70 544.86,172.20 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill:#3cb371"></path>
+            </svg></div>
+        <div style="overflow: hidden;" class="wave"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-16.08,-10.36 C283.01,237.33 399.26,-22.20 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #228b22"></path>
+            </svg></div>
+        <div class="paragraph">
+            <p>Created by Damian Kubecki &copy;</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/app.js"></script>
+    <script src="js/DOM.js"></script>
+</body>
+
+</html>

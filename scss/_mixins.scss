@@ -1,0 +1,17 @@
+@mixin btn {
+    padding: 10px 80px;
+    border: 2px solid;
+    font-size: 2em;
+    background-color: white;
+    color: #222;
+    text-transform: uppercase;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@mixin flexbox($direction) {
+    display: flex;
+    flex-direction: $direction;
+}

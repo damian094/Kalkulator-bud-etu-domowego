@@ -1,0 +1,571 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Hind Siliguri';
+}
+
+@-webkit-keyframes spanLine {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes spanLine {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showSection {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes showSection {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes hideSection {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes hideSection {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@media (max-width: 1025px) {
+  @-webkit-keyframes showSection {
+    0% {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes showSection {
+    0% {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes hideSection {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
+  }
+  @keyframes hideSection {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border: solid 3px white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border: solid 3px white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+body header {
+  padding-top: 20px;
+}
+
+body header h1 {
+  text-align: left;
+  font-style: italic;
+  padding: 0 50px;
+  border-bottom: 3px solid #228b22;
+  color: #333;
+  margin: 0 50px;
+  font-size: 2.5rem;
+}
+
+body main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  height: 100%;
+}
+
+body main div.container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main div.container section {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+body main div.container section select {
+  margin: 5px 0;
+  border: 1px solid #228b22;
+  padding: 3px 5px;
+  outline: none;
+  font-size: 1em;
+}
+
+body main div.container section button {
+  padding: 10px 80px;
+  border: 2px solid;
+  font-size: 2em;
+  background-color: white;
+  color: #222;
+  text-transform: uppercase;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body main div.container section button:hover {
+  background-color: #333;
+  color: #eee;
+}
+
+body main div.container section#start {
+  -webkit-animation: showSection .5s linear both;
+          animation: showSection .5s linear both;
+}
+
+body main div.container section#expenses.hidden,
+body main div.container section#incomes.hidden,
+body main div.container section#summary.hidden,
+body main div.container section#start.hidden {
+  display: none;
+}
+
+body main div.container section#expenses,
+body main div.container section#incomes,
+body main div.container section#summary {
+  display: block;
+  text-align: center;
+  padding: 50px;
+}
+
+body main div.container section#expenses form,
+body main div.container section#incomes form,
+body main div.container section#summary form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 30px 50px;
+  font-size: 1em;
+}
+
+body main div.container section#expenses form h3,
+body main div.container section#incomes form h3,
+body main div.container section#summary form h3 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #228b22;
+  text-align: left;
+  color: #222;
+}
+
+body main div.container section#expenses form label,
+body main div.container section#incomes form label,
+body main div.container section#summary form label {
+  -ms-flex-preferred-size: 51%;
+      flex-basis: 51%;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+body main div.container section#expenses form input,
+body main div.container section#incomes form input,
+body main div.container section#summary form input {
+  width: 150px;
+  margin: 5px 5px 5px 0;
+  padding: 8px;
+  border: 1px solid #228b22;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+body main div.container section#expenses form input:focus,
+body main div.container section#incomes form input:focus,
+body main div.container section#summary form input:focus {
+  border: 1px solid #222;
+  outline: none;
+}
+
+body main div.container section#expenses button,
+body main div.container section#incomes button,
+body main div.container section#summary button {
+  font-size: 1em;
+}
+
+body main div.container section#expenses h2,
+body main div.container section#incomes h2,
+body main div.container section#summary h2 {
+  padding: 10px;
+}
+
+body main div.container section#summary h2 {
+  padding: 20px;
+  font-size: 2em;
+}
+
+body main div.container section#summary p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+body main div.container section#summary p span {
+  font-weight: normal;
+}
+
+body main div.container section#summary div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+body main div.container section#summary div canvas {
+  width: 750px !important;
+}
+
+body main section#text {
+  display: block;
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
+  border-left: 3px solid #228b22;
+  padding: 50px;
+}
+
+body main section#text h2 {
+  font-weight: normal;
+  font-size: 4em;
+  color: #333;
+}
+
+body main section#text h2.typeWriter {
+  padding-bottom: 15px;
+}
+
+body main section#text span.description {
+  padding: 10px 0;
+  font-size: 1.5em;
+}
+
+body main section#text span.animated {
+  -webkit-animation: spanLine .6s infinite linear;
+          animation: spanLine .6s infinite linear;
+  color: #444;
+}
+
+body main section#text .invisible {
+  opacity: 0;
+  cursor: default;
+}
+
+body main section#text .invisible.hidden {
+  display: none;
+}
+
+body footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-height: 120px;
+}
+
+body footer div.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+}
+
+body footer div.paragraph {
+  z-index: 1;
+  width: 100%;
+}
+
+body footer div.paragraph p {
+  padding: 0 0 5px;
+  background-color: #228b22;
+  color: #eee;
+  font-size: 1em;
+  text-align: center;
+}
+
+@media (max-width: 1025px) {
+  html {
+    font-size: 11px;
+  }
+  body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main div.container {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    height: 1px;
+  }
+  body main div.container section {
+    padding: 2px;
+  }
+  body main div.container section select {
+    padding: 1px 3px;
+  }
+  body main div.container section button {
+    padding: 3px 30px;
+  }
+  body main div.container section#expenses,
+  body main div.container section#incomes,
+  body main div.container section#summary {
+    padding: 0px;
+  }
+  body main div.container section#expenses form,
+  body main div.container section#incomes form,
+  body main div.container section#summary form {
+    padding: 10px 50px;
+  }
+  body main div.container section#expenses form input,
+  body main div.container section#incomes form input,
+  body main div.container section#summary form input {
+    padding: 4px;
+  }
+  body main div.container section#summary h2 {
+    padding: 0;
+  }
+  body main div.container section#summary div {
+    padding: 20px;
+  }
+  body main div.container section#summary div canvas {
+    width: 450px !important;
+  }
+  body main section#text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    border-left: 0;
+    padding: 20px 50px;
+  }
+  body main section#text span.description {
+    padding: 10px 0;
+  }
+  body footer {
+    min-height: 80px;
+  }
+  body footer div.wave {
+    height: 80px;
+  }
+}
+
+@media (max-width: 415px), (max-width: 1000px) and (orientation: landscape) {
+  html {
+    font-size: 8px;
+  }
+  body header h1 {
+    padding: 0 10px;
+    margin: 0 20px;
+  }
+  body main div.container section button {
+    padding: 3px 20px;
+    margin-top: 10px;
+  }
+  body main div.container section#expenses form,
+  body main div.container section#incomes form,
+  body main div.container section#summary form {
+    padding: 5px 20px;
+  }
+  body main div.container section#expenses form input,
+  body main div.container section#incomes form input,
+  body main div.container section#summary form input {
+    padding: 0px;
+    width: 65px;
+  }
+  body main div.container section#expenses form label,
+  body main div.container section#incomes form label,
+  body main div.container section#summary form label {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  body main div.container section#summary h2 {
+    padding: 0;
+  }
+  body main div.container section#summary div canvas {
+    width: 300px !important;
+  }
+  body main section#text {
+    padding: 15px 20px;
+  }
+  body main section#text h2 {
+    font-size: 3.7em;
+  }
+  body main section#text h2.typeWriter {
+    padding-bottom: 0px;
+  }
+  body main section#text span.description {
+    padding: 5px 0;
+  }
+  body footer {
+    min-height: 60px;
+  }
+  body footer div.wave {
+    height: 60px;
+  }
+  body footer div.paragraph p {
+    padding-bottom: 2px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
