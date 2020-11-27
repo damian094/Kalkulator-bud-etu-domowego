@@ -27,7 +27,6 @@ html {
 
 body {
     @include flexbox(column);
-    height: 100vh;
     width: 100vw;
     background-color: rgb(250, 250, 250);
     overflow: hidden;
