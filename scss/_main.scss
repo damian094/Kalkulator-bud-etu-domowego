@@ -320,21 +320,17 @@ body {
     }
 }
 
-@media (max-width: 415px), (max-width: 1000px) and (orientation: landscape) {
+@media (max-width: 415px),
+(max-width: 1000px) and (orientation: landscape) {
     html {
         font-size: 13px;
     }
 
     body {
-        header {
-            h1 {
-                padding: 0 5px;
-                margin: 0;
-                font-size: 1.8em;
-            }
-        }
+
         main {
             div.container {
+                padding-top: 20px;
                 section {
                     button {
                         padding: 3px 20px;
@@ -362,7 +358,7 @@ body {
                         }
                     }
                 }
-                
+
                 section#summary {
                     h2 {
                         padding: 0;
@@ -376,25 +372,32 @@ body {
                     }
                 }
             }
+
             section#text {
-                padding: 25px 20px 20px;
+                padding: 30px 20px 0;
+                background-color:rgba(65, 64, 64, 0.637);
+                color: #eee;
+                flex-basis: 250px;
+                border-radius: 0 0 30px 30px;
 
                 h2 {
                     font-size: 3.3em;
                     line-height: 40px;
+                    color: #eee;
                 }
 
-                
-            h2.typeWriter {
-                padding-bottom: 12px;
-            }
+
+                h2.typeWriter {
+                    padding-bottom: 10px;
+                }
 
                 span.description {
                     line-height: 20px;
-                    font-size: 1.1em;
+                    font-size: 1.2em;
                 }
             }
         }
+
         footer {
             min-height: 50px;
 
@@ -405,7 +408,7 @@ body {
             div.paragraph {
                 p {
                     padding-bottom: 2px;
-                    font-size: 0.65em;
+                    font-size: 0.7em;
                 }
             }
         }

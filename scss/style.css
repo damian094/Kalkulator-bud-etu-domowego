@@ -515,10 +515,8 @@ body footer div.paragraph p {
   html {
     font-size: 13px;
   }
-  body header h1 {
-    padding: 0 5px;
-    margin: 0;
-    font-size: 1.8em;
+  body main div.container {
+    padding-top: 20px;
   }
   body main div.container section button {
     padding: 3px 20px;
@@ -551,18 +549,24 @@ body footer div.paragraph p {
     width: 350px !important;
   }
   body main section#text {
-    padding: 25px 20px 20px;
+    padding: 30px 20px 0;
+    background-color: rgba(65, 64, 64, 0.637);
+    color: #eee;
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+    border-radius: 0 0 30px 30px;
   }
   body main section#text h2 {
     font-size: 3.3em;
     line-height: 40px;
+    color: #eee;
   }
   body main section#text h2.typeWriter {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
   }
   body main section#text span.description {
     line-height: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   body footer {
     min-height: 50px;
@@ -572,7 +576,7 @@ body footer div.paragraph p {
   }
   body footer div.paragraph p {
     padding-bottom: 2px;
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -75,6 +75,8 @@ class DOMAnimation {
             document.querySelectorAll('select option:nth-of-type(2)').forEach(input => {
                 input.textContent = "PLN/ROK";
             });
+            document.querySelector('header').remove();
+            document.querySelector('#summary h2').remove();
         } 
     }
 }
