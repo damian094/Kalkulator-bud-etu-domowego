@@ -59,7 +59,6 @@ class DOMAnimation {
                 this.headerInterval = setInterval(this.changeHeaderText, 80);
                 this.paragraphInterval = setInterval(this.changeParagraphText, 40);
                 this.changeSection();
-                document.body.style.zoom = 1;
             })
         })
         
@@ -70,11 +69,14 @@ class DOMAnimation {
             document.querySelector('h2.invisible').classList.add('hidden');
         }
         if (window.matchMedia('(max-width: 415px)').matches) {
-            document.querySelectorAll('select option:nth-of-type(1)').forEach(input => {
-                input.textContent = "PLN/MSC";
+            document.querySelectorAll('select option:nth-of-type(1)').forEach(opt => {
+                opt.textContent = "MSC";
             });
-            document.querySelectorAll('select option:nth-of-type(2)').forEach(input => {
-                input.textContent = "PLN/ROK";
+            document.querySelectorAll('select option:nth-of-type(2)').forEach(opt => {
+                opt.textContent = "ROK";
+            });
+            document.querySelectorAll('form>input').forEach(ipt => {
+                ipt.placeholder = "PLN";
             });
             document.querySelector('header').remove();
             document.querySelector('#summary h2').remove();

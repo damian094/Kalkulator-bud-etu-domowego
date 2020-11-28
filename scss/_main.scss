@@ -342,17 +342,17 @@ body {
                 section#summary {
 
                     form {
-                        padding: 5px 6px;
+                        padding: 5px 5px;
 
                         input {
-                            padding: 3px;
-                            width: 80px;
-                            font-size: 0.8em;
+                            padding: 2px;
+                            width: 70px;
+                            font-size: 1em;
                             background-color: white;
                         }
 
                         label {
-                            flex-basis: 40%;
+                            flex-basis: 45%;
                             line-height: 13px;
                         }
                     }
@@ -373,11 +373,11 @@ body {
             }
 
             section#text {
-                padding: 30px 20px 0;
+                padding: 10px 10px 0;
                 background-color:rgba(65, 64, 64, 0.637);
                 color: #eee;
-                flex-basis: 220px;
-                border-radius: 0 0 30px 30px;
+                flex-basis: 210px;
+                border-radius: 0 0 20px 20px;
 
                 h2 {
                     font-size: 3.3em;
