@@ -146,8 +146,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
+  height: 100vh;
   background-color: #fafafa;
-  overflow-y: hidden;
 }
 
 body header {
